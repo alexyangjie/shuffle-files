@@ -30,7 +30,9 @@ def shuffle_files(directory):
                 newname = ''
                 success = False
                 while not success:
-                    tmpname = randint(1000000000, 9999999999)
+                    tmpname = 0
+                    for i in range(0, 3):
+                        tmpname = randint(1000000000, 9999999999)
                     if not (tmpname in usedname or usedname_add(tmpname)):
                         newname = str(tmpname)
                         success = True
